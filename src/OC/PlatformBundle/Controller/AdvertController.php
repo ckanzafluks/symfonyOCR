@@ -18,10 +18,11 @@ class AdvertController extends Controller
   	{
 		// ...
 
-  		$mailer = $this->container->get('mailer'); 
+  		//$mailer = $this->container->get('mailer');
+  		
 
-  		var_dump("<pre>", $mailer);
-  		die;
+  		//var_dump("<pre>", $this->container->get('oc_platform.antispam'));
+  		//die;
 
 
 
