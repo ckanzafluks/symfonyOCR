@@ -18,6 +18,14 @@ class AdvertController extends Controller
   	{
 		// ...
 
+  		$mailer = $this->container->get('mailer'); 
+
+  		var_dump("<pre>", $mailer);
+  		die;
+
+
+
+
 		// Notre liste d'annonce en dur
 		$listAdverts = array(
 			array(

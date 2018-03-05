@@ -1,5 +1,13 @@
 # src/OC/PlatformBundle/Resources/config/routing.yml
 
+# oc_platform_home:
+#     path:      /{page}
+#     defaults:
+#         _controller: OCPlatformBundle:Advert:index
+#         page:        1
+#     requirements:
+#         page: \d*
+
 oc_platform_home:
     path:      /{page}
     defaults:
@@ -7,6 +15,7 @@ oc_platform_home:
         page:        1
     requirements:
         page: \d*
+
     
 oc_platform_view:
     path:      /advert/{id}
