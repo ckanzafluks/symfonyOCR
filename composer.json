@@ -5,7 +5,8 @@
     "autoload": {
         "psr-4": {
             "OC\\": "src/OC",
-            "AppBundle\\": "src/AppBundle"
+            "AppBundle\\": "src/AppBundle",
+	    "CustomBundle\\": "src/CustomBundle"   
         },
         "classmap": [
             "app/AppKernel.php",
@@ -33,7 +34,6 @@
         "symfony/symfony": "3.4.*",
         "twig/twig": "^1.0||^2.0",
         "twig/extensions": "~1.0",
-        "incenteev/composer-parameter-handler": "~2.0",
         "doctrine/doctrine-fixtures-bundle": "~2.3"        
     },
     "require-dev": {
