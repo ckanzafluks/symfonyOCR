@@ -1,4 +1,6 @@
-{% extends "CustomCoreBundle::layout.html.twig" %}
+{# src/OC/PlatformBundle/Resources/views/Advert/index.html.twig #}
+
+{% extends "OCPlatformBundle::layout.html.twig" %}
 
 {% block title %}
   Accueil - {{ parent() }}
@@ -7,11 +9,11 @@
 {% block ocplatform_body %}
 
   <h2>Liste des annonces</h2>
-{#
+ 
   <ul>
     {% for advert in listAdverts %}
       <li>
-        <a href="{{ path('custom_core_homepage', {'id': advert.id}) }}">
+        <a href="{{ path('custom_core_view', {'id': advert.id}) }}">
           {{ advert.title }}
         </a>
         par {{ advert.author }},
@@ -21,5 +23,6 @@
       <li>Pas (encore !) d'annonces</li>
     {% endfor %}
   </ul>
-#}
+
+
 {% endblock %}

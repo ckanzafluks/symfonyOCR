@@ -2,13 +2,33 @@ custom_core_homepage:
     path:      /
     defaults:
         _controller: CustomCoreBundle:Default:index
-        page:        1
+        page:        
     requirements:
         page: \d*
 
-#oc_platform_delete:
-#    path:      /delete/{id}
-#    defaults:
-#        _controller: OCPlatformBundle:Advert:delete
-#    requirements:
-#        id: \d+
+custom_core_view:
+    path:      /advert/{id}
+    defaults:
+        _controller: CustomCoreBundle:Advert:view
+    requirements:
+        id: \d+
+
+custom_core_add:
+    path:      /add
+    defaults:
+        _controller: CustomCoreBundle:Advert:add
+
+custom_core_edit:
+    path:      /edit/{id}
+    defaults:
+        _controller: CustomCoreBundle:Advert:edit
+    requirements:
+        id: \d+
+
+custom_core_delete:
+    path:      /delete/{id}
+    defaults:
+        _controller: CustomCoreBundle:Advert:delete
+    requirements:
+        id: \d+
+        

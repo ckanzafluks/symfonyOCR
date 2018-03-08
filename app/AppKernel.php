@@ -3,7 +3,6 @@
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
-#use OC\PlatformBundle\OCPlatformBundle;
 
 class AppKernel extends Kernel
 {
@@ -18,7 +17,6 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
-            new OC\PlatformBundle\OCPlatformBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new CustomCoreBundle\CustomCoreBundle(),
         ];
