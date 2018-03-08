@@ -1,0 +1,14 @@
+custom_core_homepage:
+    path:      /
+    defaults:
+        _controller: CustomCoreBundle:Default:index
+        page:        1
+    requirements:
+        page: \d*
+
+#oc_platform_delete:
+#    path:      /delete/{id}
+#    defaults:
+#        _controller: OCPlatformBundle:Advert:delete
+#    requirements:
+#        id: \d+
