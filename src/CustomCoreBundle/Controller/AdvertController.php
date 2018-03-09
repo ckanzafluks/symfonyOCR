@@ -19,14 +19,20 @@ class AdvertController extends Controller
 		));
   	}
 	
-	public function viewAction($id,Request $request) {
+	public function viewAction($id,Request $request) 
+	{
 	    $session = $request->getSession();
-	    $session->getFlashBag()->add('info', '@Todo.....');
+	    $session->getFlashBag()->add('info', 'La page de détail de l\'annonce sera prochainement disponible!');
 	    return $this->redirectToRoute('custom_core_homepage');
 	}
 	
-	
-	
+	public function addAction(Request $request) 
+	{
+	    $session = $request->getSession();
+	    $session->getFlashBag()->add('info', 'La page d\'annonces sera prochainement disponible!');
+	    return $this->redirectToRoute('custom_core_homepage');
+	}
+		
 
 	public function menuAction()
   	{   
@@ -38,6 +44,5 @@ class AdvertController extends Controller
 	    return $this->render('CustomCoreBundle:Advert:menu.html.twig', array(
             'listAdverts' => $listAdverts
 	    ));
-  	}
-  	
+  	}  	
 }

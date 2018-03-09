@@ -17,8 +17,7 @@
             <div id="header" class="jumbotron">
                 <h1>Ma plateforme d'annonces</h1>
                 <p>
-                    Ce projet est propulsé par Symfony,
-                    et construit grâce au MOOC OpenClassrooms et SensioLabs.
+                    Ce projet est propulsé par Symfony, et construit grâce au MOOC OpenClassrooms et SensioLabs.
                 </p>
             </div>
 
@@ -38,7 +37,13 @@
                         <li><a href="{{ path('custom_core_contact') }}">Formulaire</a></li>                        
                     </ul>
                 </div>
-                <div id="content" class="col-md-9">
+                <div id="content" class="col-md-9">                	
+			    	{% for message in app.session.flashbag.get('info') %}
+			    		<div class="alert alert-warning" role="alert">
+			        	<p>{{ message }}</p>
+			        	</div>
+			      	{% endfor %}
+				    
                     {% block body %}
                     {% endblock %}
                 </div>
@@ -46,7 +51,7 @@
             <hr>
 
             <footer>
-                <p>The sky's the limit © {{ 'now'|date('Y') }} and beyond.</p>
+                <p>Camille KANZA © {{ 'now'|date('Y') }}</p>
             </footer>
         </div>
 
