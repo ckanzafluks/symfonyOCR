@@ -7,6 +7,12 @@
 {% endblock %}
 
 {% block body %}
+	<div>
+      {# On affiche tous les messages flash dont le nom est « info » #}
+      {% for message in app.session.flashbag.get('info') %}
+        <p>{{ message }}</p>
+      {% endfor %}
+    </div>	
 
   {# On définit un sous-titre commun à toutes les pages du bundle, par exemple #}
   <h1>Annonces</h1>

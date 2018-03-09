@@ -31,4 +31,11 @@ custom_core_delete:
         _controller: CustomCoreBundle:Advert:delete
     requirements:
         id: \d+
+
+custom_core_contact:
+    path:      /contact/
+    defaults:
+        _controller: CustomCoreBundle:Default:contact
         
+        
+           
