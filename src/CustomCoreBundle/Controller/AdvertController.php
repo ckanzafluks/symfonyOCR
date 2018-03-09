@@ -12,21 +12,24 @@ class AdvertController extends Controller
 
 
 
-	public function indexAction($page)
+	public function indexAction()
   	{
 	    return $this->render('CustomCoreBundle:Advert:index.html.twig', array(
 			'listAdverts' => $listAdverts
 		));
   	}
-
-	public function viewAction($id)
-	{
-		$url = $this->get('router')->generate('custome_core_home');
-		return new RedirectResponse($url);
+	
+	public function viewAction($id,Request $request) {
+	    $session = $request->getSession();
+	    $session->getFlashBag()->add('info', '@Todo.....');
+	    return $this->redirectToRoute('custom_core_homepage');
 	}
+	
+	
+	
 
 	public function menuAction()
-  	{
+  	{   
         $listAdverts = array(
             array('id' => 2, 'title' => 'Recherche développeur Symfony'),
             array('id' => 5, 'title' => 'Mission de webmaster'),

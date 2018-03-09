@@ -13,7 +13,7 @@ class DefaultController extends Controller
     
     
     /**
-     * @Route("/", name="xx")
+     * @Route("/", name="homepage")
      */
     public function indexAction()
     {
@@ -37,11 +37,7 @@ class DefaultController extends Controller
     public function contactAction(Request $request) {
         $session = $request->getSession();
         $session->getFlashBag()->add('info', 'La page de contact n\'est pas encore disponible. Merci de revenir plus tard!');
-        
         return $this->redirectToRoute('custom_core_homepage');
-        
-        ///$url = $this->get('router')->generate('custom_core_homepage');
-        //return new RedirectResponse($url);
     }
     
     

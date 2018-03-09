@@ -18,17 +18,10 @@ custom_core_add:
     defaults:
         _controller: CustomCoreBundle:Advert:add
 
-custom_core_edit:
-    path:      /edit/{id}
+custom_core_view:
+    path:      /view/{id}
     defaults:
-        _controller: CustomCoreBundle:Advert:edit
-    requirements:
-        id: \d+
-
-custom_core_delete:
-    path:      /delete/{id}
-    defaults:
-        _controller: CustomCoreBundle:Advert:delete
+        _controller: CustomCoreBundle:Advert:view
     requirements:
         id: \d+
 

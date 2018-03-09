@@ -15,4 +15,8 @@ php bin/console generate:bundle
 Installer le générateur de bundle :
 composer require sensio/generator-bundle
 
+vidage du cache
+php bin/console cache:clear --no-warmup 
+
+
 

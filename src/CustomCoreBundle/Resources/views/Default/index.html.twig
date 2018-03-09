@@ -4,22 +4,10 @@
   Accueil - {{ parent() }}
 {% endblock %}
 
-{% block ocplatform_body %}
+{% block body %}
 
   <h2>Liste des annonces</h2>
-{#
-  <ul>
-    {% for advert in listAdverts %}
-      <li>
-        <a href="{{ path('custom_core_homepage', {'id': advert.id}) }}">
-          {{ advert.title }}
-        </a>
-        par {{ advert.author }},
-        le {{ advert.date|date('d/m/Y') }}
-      </li>
-    {% else %}
-      <li>Pas (encore !) d'annonces</li>
-    {% endfor %}
-  </ul>
-#}
+
+  {{ render(controller("CustomCoreBundle:Advert:menu", {'limit': 3})) }}
+
 {% endblock %}
